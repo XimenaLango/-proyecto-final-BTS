@@ -41,7 +41,7 @@ public class ModeloPhotocard {
         }
     }
 
-    // 2. BUSCAR POR ID (Usado en el controlador)
+  
     public Photocard buscarPorId(String id) {
         String sql = "SELECT * FROM photocard WHERE id_photocard = ?";
         Photocard p = null;
@@ -67,7 +67,7 @@ public class ModeloPhotocard {
         return p;
     }
 
-    // 3. ACTUALIZAR (Usado en el controlador)
+    
     public boolean actualizar(Photocard p) throws PrecioInvalidoException {
         validarPrecio(p.getPrecioEstimado());
         String sql = "UPDATE photocard SET rareza=?, precio_estimado=?, "
@@ -90,7 +90,7 @@ public class ModeloPhotocard {
         }
     }
 
-    // 4. ELIMINAR (Usado en el controlador)
+    
     public boolean eliminar(String id) {
         String sql = "DELETE FROM photocard WHERE id_photocard=?";
 
@@ -108,7 +108,7 @@ public class ModeloPhotocard {
         }
     }
 
-    // 5. OBTENER TODOS (Usado en el controlador para la tabla)
+   
     public List<Photocard> obtenerTodos() {
         List<Photocard> lista = new ArrayList<>();
         String sql = "SELECT * FROM photocard";
