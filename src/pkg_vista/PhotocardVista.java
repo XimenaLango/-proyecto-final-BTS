@@ -26,18 +26,132 @@ public class PhotocardVista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        lblTitulo = new javax.swing.JLabel();
+        lblTitulo2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        txtId = new javax.swing.JTextField();
+        lblRareza = new javax.swing.JLabel();
+        cmbRareza = new javax.swing.JComboBox<>();
+        lblPrecioEstimado = new javax.swing.JLabel();
+        txtPrecioEstimado = new javax.swing.JTextField();
+        lblDetalles = new javax.swing.JLabel();
+        txtDetalles = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
+        btnGuardar = new javax.swing.JButton();
+        btnConsultar = new javax.swing.JButton();
+        btnActualizar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 153, 204));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblTitulo.setFont(new java.awt.Font("Goudy Stout", 0, 18)); // NOI18N
+        lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitulo.setText("GESTION DE COLECCIONABLES");
+        getContentPane().add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, -1, -1));
+
+        lblTitulo2.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        lblTitulo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitulo2.setText("Atributos de tu coleccionable:");
+        getContentPane().add(lblTitulo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 1, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel1.setText("ID:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+
+        txtId.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 71, -1));
+
+        lblRareza.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblRareza.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblRareza.setText("Rareza:");
+        getContentPane().add(lblRareza, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+
+        cmbRareza.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar...", "Común", "Rara", "Super Rara", "Edición Limitada" }));
+        getContentPane().add(cmbRareza, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, -1, -1));
+
+        lblPrecioEstimado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblPrecioEstimado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPrecioEstimado.setText("Precio estimado:");
+        getContentPane().add(lblPrecioEstimado, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+
+        txtPrecioEstimado.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtPrecioEstimado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(txtPrecioEstimado, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 100, -1));
+
+        lblDetalles.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblDetalles.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDetalles.setText("Detalles:");
+        getContentPane().add(lblDetalles, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, -1, -1));
+
+        txtDetalles.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtDetalles.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(txtDetalles, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 161, -1));
+
+        jTable1.setBackground(new java.awt.Color(255, 153, 204));
+        jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTable1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "ID", "Rareza", "Precio estimado", "Detalles"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 410, 170));
+
+        jLabel2.setBackground(new java.awt.Color(255, 102, 153));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel2.setText("INVENTARIO REGISTRADO:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, -1, -1));
+
+        btnGuardar.setBackground(new java.awt.Color(255, 153, 204));
+        btnGuardar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnGuardar.setText("Guardar");
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
+
+        btnConsultar.setBackground(new java.awt.Color(255, 153, 204));
+        btnConsultar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnConsultar.setText("Consultar");
+        getContentPane().add(btnConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, -1, -1));
+
+        btnActualizar.setBackground(new java.awt.Color(255, 153, 204));
+        btnActualizar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnActualizar.setText("Actualizar");
+        getContentPane().add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, -1, -1));
+
+        btnEliminar.setBackground(new java.awt.Color(255, 153, 204));
+        btnEliminar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnEliminar.setText("Eliminar");
+        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, -1, -1));
+
+        btnLimpiar.setBackground(new java.awt.Color(255, 153, 204));
+        btnLimpiar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnLimpiar.setText("Limpiar");
+        getContentPane().add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, -1, -1));
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BTS wallpaper pink.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -78,5 +192,25 @@ public class PhotocardVista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnActualizar;
+    public javax.swing.JButton btnConsultar;
+    public javax.swing.JButton btnEliminar;
+    public javax.swing.JButton btnGuardar;
+    public javax.swing.JButton btnLimpiar;
+    private javax.swing.ButtonGroup buttonGroup1;
+    public javax.swing.JComboBox<String> cmbRareza;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    public javax.swing.JLabel lblDetalles;
+    public javax.swing.JLabel lblPrecioEstimado;
+    public javax.swing.JLabel lblRareza;
+    public javax.swing.JLabel lblTitulo;
+    public javax.swing.JLabel lblTitulo2;
+    public javax.swing.JTextField txtDetalles;
+    public javax.swing.JTextField txtId;
+    public javax.swing.JTextField txtPrecioEstimado;
     // End of variables declaration//GEN-END:variables
 }
