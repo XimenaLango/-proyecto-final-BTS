@@ -1,5 +1,6 @@
 package pkg_modelo;
 
+//ximena
 public abstract class ItemColeccionable {
     protected int id;
     protected String rareza;

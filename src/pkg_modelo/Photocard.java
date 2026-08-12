@@ -1,5 +1,6 @@
 package pkg_modelo;
 
+//ximena
 
 public class Photocard extends ItemColeccionable {
     private String nombreMiembro;
