@@ -10,12 +10,11 @@ public class Photocard extends ItemColeccionable {
     }
 
     public Photocard(String idString, String rareza, double precioEstimado, String detalles) {
-        // Asignamos rareza y precio a la clase padre ItemColeccionable
         this.rareza = rareza;
         this.precioEstimado = precioEstimado;
         this.detalles = detalles;
         
-        // Convertimos el ID a int para la clase base si es numérico
+       
         try {
             this.id = Integer.parseInt(idString);
         } catch (NumberFormatException e) {
