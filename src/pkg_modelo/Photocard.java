@@ -3,46 +3,36 @@ package pkg_modelo;
 //ximena
 
 public class Photocard extends ItemColeccionable {
-    private String nombreMiembro;
-    private String versionAlbum;
-    private boolean disponible;
+    private String detalles;
 
     public Photocard() {
         super();
     }
 
-    public Photocard(int id, String nombreMiembro, String versionAlbum, 
-            String rareza, double precioEstimado, boolean disponible) {
-        super(id, rareza, precioEstimado);
-        this.nombreMiembro = nombreMiembro;
-        this.versionAlbum = versionAlbum;
-        this.disponible = disponible;
+    public Photocard(String idString, String rareza, double precioEstimado, String detalles) {
+        // Asignamos rareza y precio a la clase padre ItemColeccionable
+        this.rareza = rareza;
+        this.precioEstimado = precioEstimado;
+        this.detalles = detalles;
+        
+        // Convertimos el ID a int para la clase base si es numérico
+        try {
+            this.id = Integer.parseInt(idString);
+        } catch (NumberFormatException e) {
+            this.id = 0;
+        }
     }
 
     @Override
     public String obtenerDetalles() {
-        return "Photocard de " + nombreMiembro + " - " + versionAlbum + " (" + rareza + ")";
+        return detalles;
     }
 
-    // Getters y Setters
-    public String getNombreMiembro()
-    { return nombreMiembro; 
-    }
-    public void setNombreMiembro(String nombreMiembro){ 
-        this.nombreMiembro = nombreMiembro; 
+    public String getDetalles() {
+        return detalles;
     }
 
-    public String getVersionAlbum(){ 
-        return versionAlbum; 
-    }
-    public void setVersionAlbum(String versionAlbum){ 
-        this.versionAlbum = versionAlbum; 
-    }
-
-    public boolean isDisponible(){ 
-        return disponible; 
-    }
-    public void setDisponible(boolean disponible){ 
-        this.disponible = disponible; 
+    public void setDetalles(String detalles) {
+        this.detalles = detalles;
     }
 }
