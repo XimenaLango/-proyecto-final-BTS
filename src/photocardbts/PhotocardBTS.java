@@ -1,20 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package photocardbts;
+
+import pkg_controlador.ControladorPhotocard;
+import pkg_modelo.ModeloPhotocard;
+import pkg_vista.PhotocardVista;
+
 
 /**
  *
- * @author pc
+ * @author MELI
  */
 public class PhotocardBTS {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ModeloPhotocard modelo = new ModeloPhotocard();
+        PhotocardVista vista = new PhotocardVista();
+        ControladorPhotocard controlador = new ControladorPhotocard(vista, modelo);
+        
+        vista.setLocationRelativeTo(null);
+        vista.setVisible(true);
     }
-    
 }

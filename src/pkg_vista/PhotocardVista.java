@@ -38,7 +38,7 @@ public class PhotocardVista extends javax.swing.JFrame {
         lblDetalles = new javax.swing.JLabel();
         txtDetalles = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaInventario = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         btnGuardar = new javax.swing.JButton();
         btnConsultar = new javax.swing.JButton();
@@ -96,10 +96,10 @@ public class PhotocardVista extends javax.swing.JFrame {
         txtDetalles.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(txtDetalles, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 161, -1));
 
-        jTable1.setBackground(new java.awt.Color(255, 153, 204));
-        jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTable1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaInventario.setBackground(new java.awt.Color(255, 153, 204));
+        tablaInventario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tablaInventario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tablaInventario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -115,7 +115,7 @@ public class PhotocardVista extends javax.swing.JFrame {
                 "ID", "Rareza", "Precio estimado", "Detalles"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablaInventario);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 410, 170));
 
@@ -203,12 +203,12 @@ public class PhotocardVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     public javax.swing.JLabel lblDetalles;
     public javax.swing.JLabel lblPrecioEstimado;
     public javax.swing.JLabel lblRareza;
     public javax.swing.JLabel lblTitulo;
     public javax.swing.JLabel lblTitulo2;
+    public javax.swing.JTable tablaInventario;
     public javax.swing.JTextField txtDetalles;
     public javax.swing.JTextField txtId;
     public javax.swing.JTextField txtPrecioEstimado;
