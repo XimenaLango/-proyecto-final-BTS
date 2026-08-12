@@ -1,6 +1,6 @@
 package pkg_controlador;
 
-import java.awt.List;
+import java.util.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -67,7 +67,7 @@ public class ControladorPhotocard implements ActionListener {
 
             if (modelo.insertar(p)) {
                 JOptionPane.showMessageDialog(vista, "Guardado correctamente");
-                limpiar();
+                limpiarCampos();
             } else {
                 JOptionPane.showMessageDialog(vista, "No se pudo guardar el registro");
             }
@@ -101,14 +101,14 @@ public class ControladorPhotocard implements ActionListener {
         try {
             String id = vista.txtId.getText();
             String rareza = vista.cmbRareza.getSelectedItem().toString();
-            double precio = Double.parseDouble(vista.txtPrecio.getText());
+            double precio = Double.parseDouble(vista.txtPrecioEstimado.getText());
             String detalles = vista.txtDetalles.getText();
 
             Photocard p = new Photocard(id, rareza, precio, detalles);
 
             if (modelo.actualizar(p)) {
                 JOptionPane.showMessageDialog(vista, "Actualizado correctamente");
-                limpiar();
+                limpiarCampos();
             } else {
                 JOptionPane.showMessageDialog(vista, "No se pudo actualizar el registro");
             }
@@ -126,7 +126,7 @@ public class ControladorPhotocard implements ActionListener {
             String id = vista.txtId.getText();
             if (modelo.eliminar(id)) {
                 JOptionPane.showMessageDialog(vista, "Eliminado correctamente");
-                limpiar();
+                limpiarCampos();
             } else {
                 JOptionPane.showMessageDialog(vista, "No se pudo eliminar el registro");
             }
@@ -137,7 +137,7 @@ public class ControladorPhotocard implements ActionListener {
 
     private void listarEnTabla() {
         DefaultTableModel model = (DefaultTableModel) vista.tablaInventario.getModel();
-        model.setRowCount(0); // Limpiar tabla
+        model.setRowCount(0);
 
         List<Photocard> lista = modelo.obtenerTodos();
         for (Photocard p : lista) {
