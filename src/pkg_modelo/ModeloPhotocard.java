@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import pkg_excepciones.PrecioInvalidoException;
 
+//Dafne
 public class ModeloPhotocard {
     private final String URL = "jdbc:mysql://localhost:3306/bd_bts_collection";
     private final String USER = "root";
