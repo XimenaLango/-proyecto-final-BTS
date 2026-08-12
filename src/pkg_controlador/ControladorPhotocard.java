@@ -67,6 +67,7 @@ public class ControladorPhotocard implements ActionListener {
 
             if (modelo.insertar(p)) {
                 JOptionPane.showMessageDialog(vista, "Guardado correctamente");
+                listarEnTabla();
                 limpiarCampos();
             } else {
                 JOptionPane.showMessageDialog(vista, "No se pudo guardar el registro");
