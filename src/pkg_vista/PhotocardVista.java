@@ -68,7 +68,7 @@ public class PhotocardVista extends javax.swing.JFrame {
 
         txtId.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 71, -1));
+        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 71, -1));
 
         lblRareza.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblRareza.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
